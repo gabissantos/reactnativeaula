@@ -17,13 +17,19 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import Familia from "./componentes/relacao/Familia"
 import Membro from "./componentes/relacao/Membro"
 import { SafeAreaView } from "react-native-safe-area-context"
+import ListaDeProduto from "./componentes/produto/ListaDeProdutoV2"
+import ListaProduto from "./componentes/produto/ListaProduto"
 
 
 const Stack = createNativeStackNavigator()
 
 export default () =>  
    <SafeAreaView style={styles.TelaIniciante}>
-     <Familia>
+
+      <ListaProduto/>
+
+   {/* <ListaDeProduto/>
+    {/* <Familia>
         <Membro nome="Jorge" sobrenome="Pereiras"/>
         <Membro nome="Edinaldo" sobrenome="Pereiras"/>
         <Membro nome="Marcinho" sobrenome="Pereiras"/>
@@ -34,7 +40,7 @@ export default () =>
         <Membro nome="Fernanda" sobrenome="Pereiras"/>
         <Membro nome="Jorge" sobrenome="Pereiras"/>
         <Membro nome="Marcia" sobrenome="Pereiras"/>
-        </Familia>
+        </Familia> */}
         </SafeAreaView>
 
 
