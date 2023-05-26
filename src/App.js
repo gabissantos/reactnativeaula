@@ -14,27 +14,44 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack'
 //import ContadorV2 from "./componentes/contador/ContadorV2"
 //import HomeScreen from "./componentes/HomeScreens"
 //import DetailsScreen from "./componentes/DetailsScreens"
-import Familia from "./componentes/relacao/Familia"
-import Membro from "./componentes/relacao/Membro"
+//import Familia from "./componentes/relacao/Familia"
+//import Membro from "./componentes/relacao/Membro"
 import { SafeAreaView } from "react-native-safe-area-context"
 import ListaDeProduto from "./componentes/produto/ListaDeProdutoV2"
 import ListaProduto from "./componentes/produto/ListaProduto"
 import Quadrado from "./componentes/layout/Quadrado"
 import FlexboxV1 from "./componentes/layout/FlexboxV1"
 import FlexboxV2 from "./componentes/layout/Flexbox.V2"
-const Stack = createNativeStackNavigator()
 import FlexboxV3 from "./componentes/layout/FlexboxV3"
+import FlexboxV4 from "./componentes/layout/FlexboxV4"
+import Mega from "./componentes/mega/Mega"
+import Serie from "./componentes/Trabalho/Serie"
+import Filme from "./componentes/Trabalho/Filme"
+import SerieScreen from "./componentes/Trabalho/SerieScreen"
+import FilmeScreen from "./componentes/Trabalho/FilmesScreen"
+import HomeScreen from "./componentes/Trabalho/HomeScreen"
+
+
+const Stack = createNativeStackNavigator()
 
 
 
 export default () =>  
-   <SafeAreaView style={styles.TelaIniciante}>
+ <NavigationContainer>
+<Stack.Navigator>
+    <Stack.Screen name="Home" component={HomeScreen}/>
+    <Stack.Screen name="Filme" component={FilmeScreen}/>
+    <Stack.Screen name="Serie" component={SerieScreen}/>
+ </Stack.Navigator>
+</NavigationContainer>
 
-       <FlexboxV3/>
-      
 
 
-     {/* <ListaProduto/>
+
+    
+       {/* <Mega qutdeNumeros={7}/>
+      <Serie/>
+{/* <ListaProduto/>
         <ListaDeProduto/>
         <Familia>
         <Membro nome="Jorge" sobrenome="Pereiras"/>
@@ -48,7 +65,8 @@ export default () =>
         <Membro nome="Jorge" sobrenome="Pereiras"/>
         <Membro nome="Marcia" sobrenome="Pereiras"/>
         </Familia> */}
-        </SafeAreaView>
+        
+    
 
 
 {/*<NavigationContainer>
